@@ -39,7 +39,7 @@ The Helm chart deploys the full stack: Rspamd + rspamd-iscan, with an optional i
 No `helm repo add` needed — install directly via OCI:
 
 ```bash
-helm install rspamd-iscan oci://ghcr.io/JustinGuese/rspamd-iscan \
+helm install rspamd-iscan oci://ghcr.io/justinguese/rspamd-iscan \
   --set rspamdIscan.imapAddr="imap.example.com:993" \
   --set rspamdIscan.imapUser="you@example.com"
 ```
@@ -65,7 +65,7 @@ The Rspamd controller password is auto-generated on first `helm install` and sto
 At minimum you must provide your IMAP server address and username:
 
 ```bash
-helm install rspamd-iscan oci://ghcr.io/JustinGuese/rspamd-iscan \
+helm install rspamd-iscan oci://ghcr.io/justinguese/rspamd-iscan \
   --set rspamdIscan.imapAddr="imap.example.com:993" \
   --set rspamdIscan.imapUser="you@example.com"
 ```
@@ -73,7 +73,7 @@ helm install rspamd-iscan oci://ghcr.io/JustinGuese/rspamd-iscan \
 **With an external Redis** (disable the built-in one):
 
 ```bash
-helm install rspamd-iscan oci://ghcr.io/JustinGuese/rspamd-iscan \
+helm install rspamd-iscan oci://ghcr.io/justinguese/rspamd-iscan \
   --set rspamdIscan.imapAddr="imap.example.com:993" \
   --set rspamdIscan.imapUser="you@example.com" \
   --set redis.enabled=false \
